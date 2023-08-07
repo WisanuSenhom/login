@@ -92,11 +92,9 @@ span.psw {
                   </div>
                   <div class="form-group">
                     <textarea rows="3" cols="100" class="form-control" id="nte" name="nte" placeholder="บันทึกรายละเอียดเพิ่มเติม"  warp="soft"></textarea>
-                 	
-			</div>
-        
-    <button type="submit">Login</button>
-  </div>
+</div>
+<div id="cin" class="invisible"><button id="cin" type="button" class="btn btn-success btn-lg btn-block" onclick="getLocation()">Check-In</button></div>
+<div id="cout" class="invisible"><button id="cout" type="button" class="btn btn-danger btn-lg btn-block" onclick="getLocationOut()">Check-Out</button></div>
 </form>
   
 <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
@@ -117,6 +115,25 @@ span.psw {
         liff.login();
       }
     }, err => console.error(err.code, error.message));
+
+function checks(){
+
+var today = new Date();
+today.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' })
+//document.getElementById("timer").innerHTML = today; // <p id="timer"></p>
+var hh = today.getHours();
+var mm = today.getMinutes(); 
+
+        if(hh <= 10){
+          document.getElementById("cin").classList.remove('invisible');
+        }else if(hh >= 16){
+          document.getElementById("cout").classList.remove('invisible');
+            }else{
+alert("ไม่สามารถเช็คอิน/เอาท์ได้ในช่วงเวลา 10.00-16.00 ขณะนี้เวลา "+hh+":"+mm+" น.");
+liff.closeWindow();  
+            }
+}
+	
   </script>
 
 </body>
