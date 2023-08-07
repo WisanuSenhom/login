@@ -12,12 +12,62 @@
   </style>
 </head>
 <body>
-  <img id="pictureUrl" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
+<div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <div class="jumbotron">
+            <div class="row text-center">
+              <div class="text-center col-12">
+                <h3>ระบบลงเวลาการปฏิบัติงาน</h3>
+                 <img id="pictureUrl" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3" width="200px" alt="profile">
    <!-- <img id="pictureUrl" width="25%"> -->
   <p id="userId"></p>
   <p id="displayName"></p>
   <p id="statusMessage"></p>
   <p id="getDecodedIDToken"></p>
+                
+		<iframe src="https://free.timeanddate.com/clock/i8ypwfa0/n1049/szw80/szh80/hoc000/hbw0/hfc09f/cf100/hnc07c/hwc000/fiv0/facfff/fnu2/fdi76/mqcfff/mqs4/mql18/mqw4/mqd60/mhcfff/mhs4/mhl5/mhw4/mhd62/mmv0/hhcfff/hhs1/hhb10/hmcfff/hms1/hmb10/hscfff/hsw3" frameborder="0" width="80" height="80"></iframe>
+		<br>
+		 <iframe src="https://free.timeanddate.com/clock/i7vbkm53/n2469/tlth39/fn7/fs13/tct/pct/tt0/th1" frameborder="0" width="251" height="20" allowtransparency="true"></iframe>
+              </div>
+              <div class="text-center col-12">
+                <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
+                <form id="feedbackForm" class="text-center">
+                  <div class="form-group">
+                    <label for="name">..:: ประเภทการลงเวลาปฏิบัติราชการ ::..</label>
+				  <select class="form-control" id="typea">
+  					<option value="">ปกติ</option>
+  					<option value="ไปราชการ">ไปราชการ</option>
+  					<option value="ไปช่วยราชการ">ไปช่วยราชการ</option>
+  					<option value="มาช่วยราชการ">มาช่วยราชการ</option>
+    				<option value="อื่นๆ">อื่นๆ โปรดระบุเพิ่มเติม</option>
+				</select>
+                  </div>
+                  <div class="form-group">
+                    <textarea rows="3" cols="100" class="form-control" id="nte" name="nte" placeholder="บันทึกรายละเอียดเพิ่มเติม" required="" warp="soft"></textarea>
+                 	
+			</div>
+<div id="cin" class="invisible"><button id="cin" type="button" class="btn btn-success btn-lg btn-block" onclick="getLocation()">Check-In</button></div>
+<div id="cout" class="invisible"><button id="cout" type="button" class="btn btn-danger btn-lg btn-block" onclick="getLocationOut()">Check-Out</button></div>
+                </form>
+
+			<p id="demo"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Powered By &#9882; Nongtum Healthy Hospital 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer> 
+ 
   <script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
   <script>
     function runApp() {
