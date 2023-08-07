@@ -60,17 +60,23 @@
       </div>
     </footer>
 
-<script>
-window.onload = function() {
-  initializeLiff('1654797991-wWYODmOq');
- liff.getProfile().then(profile => {
+<script>  
+window.onload = function runApp() {
+      liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
         document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
-}
+    }
+    liff.init({ liffId: "1654797991-wWYODmOq" }, () => {
+      if (liff.isLoggedIn()) {
+        runApp()
+      } else {
+        liff.login();
+      }
+    }, err => console.error(err.code, error.message));
 
 const xurl = "https://script.google.com/macros/s/AKfycbz1Qj2oNENxcyBwZTafPlfDqP0DxhGLA6uyl7kksvslaUAN2oY/exec";
 
@@ -92,18 +98,6 @@ liff.closeWindow();
             }
 }
 
-
-function initializeLiff(myLiffId) {
-    liff
-        .init({
-            liffId: myLiffId
-        })
-        .then(() => {
-            checks();
-        })
-        .catch((err) => {
-        });
-}
 
 var x = document.getElementById("demo");
 
