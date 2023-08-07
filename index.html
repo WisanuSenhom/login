@@ -1,85 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<title>โรงพยาบาลส่งเสริมสุขภาพตำบลหนองทุ่ม อำเภอเซกา จังหวัดบึงกาฬ</title>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+    <title>โรงพยาบาลส่งเสริมสุขภาพตำบลหนองทุ่ม อำเภอเซกา จังหวัดบึงกาฬ</title>
+  </head>
+	<body>
+	<script>
+         var password = "04878";
+         (function passcodeprotect() {
+            var passcode = prompt("🔑 ใส่รหัสหน่วยงาน");
+            while (passcode !== password) {
+               alert("🔒 รหัสหน่วยงานไม่ถูกต้อง..!!");
+               return passcodeprotect();
+            }
+         }());
+         alert('🧭 เข้าสู่ระบบลงเวลา');
+      </script>
 
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Login Form</h2>
-
-<form class="container" style="background-color:#f1f1f1">
-  <div class="imgcontainer">
-     <div class="col-12 col-md-8 mx-auto">
-    <img id="pictureUrl"  alt="Avatar" class="avatar">
-  </div>
-
-  <div class="container">
-             <div class="text-center col-12">
+		
+<div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 mx-auto">
+          <div class="jumbotron">
+            <div class="row text-center">
+              <div class="text-center col-12">
+                <h3>ระบบลงเวลาการปฏิบัติงาน</h3>
+		<iframe src="https://free.timeanddate.com/clock/i8ypwfa0/n1049/szw80/szh80/hoc000/hbw0/hfc09f/cf100/hnc07c/hwc000/fiv0/facfff/fnu2/fdi76/mqcfff/mqs4/mql18/mqw4/mqd60/mhcfff/mhs4/mhl5/mhw4/mhd62/mmv0/hhcfff/hhs1/hhb10/hmcfff/hms1/hmb10/hscfff/hsw3" frameborder="0" width="80" height="80"></iframe>
+		<br>
+		 <iframe src="https://free.timeanddate.com/clock/i7vbkm53/n2469/tlth39/fn7/fs13/tct/pct/tt0/th1" frameborder="0" width="251" height="20" allowtransparency="true"></iframe>
+              </div>
+              <div class="text-center col-12">
+                <!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
                 <form id="feedbackForm" class="text-center">
                   <div class="form-group">
                     <label for="name">..:: ประเภทการลงเวลาปฏิบัติราชการ ::..</label>
@@ -92,16 +49,38 @@ span.psw {
 				</select>
                   </div>
                   <div class="form-group">
-                    <textarea rows="3" cols="100" class="form-control" id="nte" name="nte" placeholder="บันทึกรายละเอียดเพิ่มเติม"  warp="soft"></textarea>
-</div>
+                    <textarea rows="3" cols="100" class="form-control" id="nte" name="nte" placeholder="บันทึกรายละเอียดเพิ่มเติม" required="" warp="soft"></textarea>
+                 	
+			</div>
 <div id="cin" class="invisible"><button id="cin" type="button" class="btn btn-success btn-lg btn-block" onclick="getLocation()">Check-In</button></div>
 <div id="cout" class="invisible"><button id="cout" type="button" class="btn btn-danger btn-lg btn-block" onclick="getLocationOut()">Check-Out</button></div>
-</div>
-</form>
-  
-<script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
-  <script>
-	  function checks(){
+                </form>
+
+			<p id="demo"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p>Powered By &#9882; Nongtum Healthy Hospital 2021</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<script>
+window.onload = function() {
+  initializeLiff('1654797991-wWYODmOq');
+}
+
+const xurl = "https://script.google.com/macros/s/AKfycbz1Qj2oNENxcyBwZTafPlfDqP0DxhGLA6uyl7kksvslaUAN2oY/exec";
+
+function checks(){
 
 var today = new Date();
 today.toLocaleString('th-TH', { timeZone: 'Asia/Bangkok' })
@@ -118,29 +97,106 @@ alert("ไม่สามารถเช็คอิน/เอาท์ได้
 liff.closeWindow();  
             }
 }
-    function runApp() {
-      liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
-        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
-        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
-      }).catch(err => console.error(err));
-    }
-    liff.init({ liffId: "1654797991-P8mEXRE0" }, () => {
-      if (liff.isLoggedIn()) {
-        runApp()
-      } else {
-        liff.login();
-      }
-    }, err => console.error(err.code, error.message));
 
 
-	
-  </script>
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+function initializeLiff(myLiffId) {
+    liff
+        .init({
+            liffId: myLiffId
+        })
+        .then(() => {
+            checks();
+        })
+        .catch((err) => {
+        });
+}
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+var sel = document.getElementById("typea").value;
+
+var ntex = document.getElementById("nte").value;
+     liff.getProfile().then(function(profile) {
+            var uid = profile.userId;
+            var uname = profile.displayName;
+        var xos = liff.getOS();
+  x.innerHTML = "Lat: " + position.coords.latitude + 
+  "<br>Long: " + position.coords.longitude+ 
+  "<br>userId: " + uid+ 
+  "<br>displayName: " + uname+
+  "<br>your OS: " + xos;
+var xmlhttp = new XMLHttpRequest();
+        var theUrl = xurl+"?ctype=In&sel="+sel+"&ntex="+ntex+"&xos="+xos+"&user="+uid+"&name="+uname+"&lat="+position.coords.latitude+"&long="+position.coords.longitude;
+        xmlhttp.open('GET', theUrl);
+        xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var jsonResponse = JSON.parse(this.responseText);
+        }
+        alert(jsonResponse.desc);
+        liff.closeWindow();
+      }});  
+}
+
+
+
+///////////////////////////////
+
+
+function getLocationOut() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPositionOut);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPositionOut(position) {
+var sel = document.getElementById("typea").value;
+
+var ntex = document.getElementById("nte").value;
+     liff.getProfile().then(function(profile) {
+            var uid = profile.userId;
+            var uname = profile.displayName;
+        var xos = liff.getOS();
+  x.innerHTML = "Lat: " + position.coords.latitude + 
+  "<br>Long: " + position.coords.longitude+ 
+  "<br>userId: " + uid+ 
+  "<br>displayName: " + uname+
+  "<br>your OS: " + xos;
+var xmlhttp = new XMLHttpRequest();
+        var theUrl = xurl+"?ctype=Out&sel="+sel+"&ntex="+ntex+"&xos="+xos+"&user="+uid+"&name="+uname+"&lat="+position.coords.latitude+"&long="+position.coords.longitude;
+        xmlhttp.open('GET', theUrl);
+        xmlhttp.send();
+            xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var jsonResponse = JSON.parse(this.responseText);
+        }
+        alert(jsonResponse.desc);
+        liff.closeWindow();
+      }});  
+}
+
+
+
+</script>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-</body>
+  </body>
 </html>
