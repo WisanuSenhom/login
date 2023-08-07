@@ -23,7 +23,7 @@
         document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
-    liff.init({ liffId: "1654797991-P8mEXRE0" }, () => {
+    liff.init({ liffId: "1654797991-wWYODmOq" }, () => {
       if (liff.isLoggedIn()) {
         runApp()
       } else {
@@ -32,18 +32,6 @@
     }, err => console.error(err.code, error.message));
   </script>
     
-	<script>
-         var password = "04878";
-         (function passcodeprotect() {
-            var passcode = prompt("🔑 ใส่รหัสหน่วยงาน");
-            while (passcode !== password) {
-               alert("🔒 รหัสหน่วยงานไม่ถูกต้อง..!!");
-               return passcodeprotect();
-            }
-         }());
-         alert('🧭 เข้าสู่ระบบลงเวลา');
-      </script>
-
 		
 <div class="container">
       <div class="row">
